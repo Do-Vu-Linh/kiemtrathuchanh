@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+
+
+</body>
+<script>
+
+    let arr = [];
+  function insertNumberToArray() {
+      let arrNew = []
+      let x = prompt("nhập số nguyên cần thêm :");
+      let index = prompt("nhập giá trị index :");
+          if (index > 0 && index <= arr.length) {
+              for( let i = 0;i<arr.length+1;i++) {
+                  if (i<index) {
+                      arrNew[i] = arr[i]
+                  }else if (i==index){
+                      arrNew[i] = x ;}
+                  else {
+                      arrNew[i] = arr[i-1]
+                  }
+
+                  }
+
+              return arrNew    }
+
+      else { return arr}
+
+      }
+
+let result = insertNumberToArray(arr)
+  document.write(result)
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  class Rectangle {
+    x ;
+    y ;
+    width ;
+    height ;
+  color ;
+  constructor(x,y,width,height,color){
+    this.x =x ;
+    this.y = y ;
+    this.color = color ;
+    this.width = width;
+    this.height = height; }
+
+          render(canvas){
+              let ctx = canvas.getContext("2d");
+              ctx.fillStyle = this.color;
+              ctx.fillRect(this.x, this.y, this.width, this.height);
+          }
+      }
+  let canvas = document.getElementById("myCanvas");
+  //đối tượng
+  let hinhChuNhat = new Rectangle(10, 10, 200, 100, "#ff0000");
+  hinhChuNhat.render(canvas);
+
+</script>
+</html>
